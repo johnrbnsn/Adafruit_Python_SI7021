@@ -40,6 +40,6 @@ sensor.begin()
 # Loop printing measurements every second.
 print('Press Ctrl-C to quit.')
 while True:
-	rel_humid = sensor.readRH()
-	print('Relative Humidity: {0:3F} %'.format(rel_humid))
-	time.sleep(1.0)
+    rel_humid = sensor.readRH()
+    print('Relative Humidity: {0:3F} %'.format(rel_humid))
+    time.sleep(1.0)
