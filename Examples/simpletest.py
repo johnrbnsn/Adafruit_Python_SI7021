@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import Adafruit_Python_SI2107.Si2107 as Si2107
+import Adafruit_SI2107.Si2107 as Si2107
 
 
 # Default constructor will use the default I2C address (0x40) and pick a default I2C bus.
