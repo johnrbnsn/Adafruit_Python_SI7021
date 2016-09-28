@@ -11,7 +11,7 @@ classifiers = ['Development Status :: 4 - Beta',
                'Topic :: Software Development',
                'Topic :: System :: Hardware']
 
-setup(name              = 'Adafruit_Python_SI2107',
+setup(name              = 'Adafruit_SI2107',
       version           = '0.0.1',
       author            = 'John Robinson',
       author_email      = 'john.rbnsn@gmail.com',
