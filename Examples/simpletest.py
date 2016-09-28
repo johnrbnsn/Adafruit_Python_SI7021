@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import Adafruit_SI2107.Si7021 as Si7021
+import Adafruit_SI7021.Si7021 as Si7021
 
 
 # Default constructor will use the default I2C address (0x40) and pick a default I2C bus.
