@@ -63,8 +63,7 @@ class Si7021(object):
     def __init__(self, address=SI7021_I2CADDR_DEFAULT, i2c=None, **kwargs):
         """Initialize Si7021 device on the specified I2C address and bus number.
 		Address defaults to 0x40 and bus number defaults to the appropriate bus
-		for the hardware.
-		"""
+		for the hardware."""
 		self._logger = logging.getLogger('Adafruit_Si7021.Si7021')
 		if i2c is None:
 			import Adafruit_GPIO.I2C as I2C
@@ -74,8 +73,7 @@ class Si7021(object):
     
     def begin(self):
 		"""Start taking temperature measurements. Returns True if the device is 
-		intialized, False otherwise.
-		"""
+		intialized, False otherwise."""
 		## Check manufacturer and device ID match expected values.
 		#mid = self._device.readU16BE(MCP9808_REG_MANUF_ID)
 		#did = self._device.readU16BE(MCP9808_REG_DEVICE_ID)
