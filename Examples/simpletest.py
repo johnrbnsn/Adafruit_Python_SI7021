@@ -20,7 +20,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-import Adafruit_SI2107.Si2107 as Si2107
+import Adafruit_SI2107.Si7021 as Si7021
 
 
 # Default constructor will use the default I2C address (0x40) and pick a default I2C bus.
@@ -29,7 +29,7 @@ import Adafruit_SI2107.Si2107 as Si2107
 # from the main GPIO header and the library will figure out the bus number based
 # on the Pi's revision.
 #
-sensor = Si2107.Si2107()
+sensor = Si7021.Si7021()
 
 # Optionally you can override the address and/or bus number:
 #sensor = Si2107.Si2107(address=0x40, busnum=2)
