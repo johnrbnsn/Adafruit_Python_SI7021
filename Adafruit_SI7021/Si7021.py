@@ -80,7 +80,8 @@ class Si7021(object):
         #self._logger.debug('Read manufacturer ID: {0:04X}'.format(mid))
         #self._logger.debug('Read device ID: {0:04X}'.format(did))
         #return mid == 0x0054 and did == 0x0400
-
+        reg1 = self._device.readU8(SI7021_CMD_READ_REG1)
+        self._logger.debug('Register 1 raw value {0}'.format(reg1))
         return True
 
     def readRH(self):
