@@ -21,7 +21,11 @@
 # THE SOFTWARE.
 
 import Adafruit_SI7021.Si7021 as Si7021
+import logging
 
+# Start a log file
+logging.basicConfig(filename="Si7021Example.log", level=logging.DEBUG)
+logging.info("simpletest.py started")
 
 # Default constructor will use the default I2C address (0x40) and pick a default I2C bus.
 #
