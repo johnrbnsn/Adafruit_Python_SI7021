@@ -81,13 +81,13 @@ class Si7021(object):
         #self._logger.debug('Read device ID: {0:04X}'.format(did))
         #return mid == 0x0054 and did == 0x0400
         reg1 = self._device.readU8(SI7021_CMD_READ_REG1)
-        self._logger.debug('Register 1 raw value {0}'.format(reg1))
+        self._logger.debug('Register 1 raw value 0x%02X', reg1)
         return True
 
     def readRH(self):
         """Read Relative humidity and return its value in % RH."""
         # Send command to read RH
-        rh = self._device.readU16BE(SI7021_CMD_MEAS_RH_NOMSTR);
+        rh = self._device.readU8(SI7021_CMD_MEAS_RH_NOMSTR);
         
         self._logger.debug('Raw relative humidity register value: 0x{0:04X}'.format(rh & 0xFFFF))
         # Scale and convert to a percentage value.
