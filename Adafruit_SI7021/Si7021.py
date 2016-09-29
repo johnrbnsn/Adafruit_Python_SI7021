@@ -94,13 +94,11 @@ class Si7021(object):
         rel_humid = 125.0 * rh / 65536.0 - 6.0
         return rel_humid
 
-    #def readTempC(self):
-        #"""Read sensor and return its value in degrees celsius."""
-        ## Read temperature register value.
-        #t = self._device.readU16BE(MCP9808_REG_AMBIENT_TEMP)
-        #self._logger.debug('Raw ambient temp register value: 0x{0:04X}'.format(t & 0xFFFF))
-        ## Scale and convert to signed value.
-        #temp = (t & 0x0FFF) / 16.0
-        #if t & 0x1000:
-            #temp -= 256.0
-        #return temp
+    def readTempC(self):
+        """Read sensor and return its value in degrees celsius."""
+        # Read temperature register value.
+        t = self._device.readU16BE(SI7021_CMD_MEAS_TEMP_NOMSTR)
+        self._logger.debug('Raw ambient temp register value: 0x{0:04X}'.format(t & 0xFFFF))
+        # Scale and convert to signed value.
+        temp = ( 175.72 * t ) / 65536.0 -46.85
+        return temp
